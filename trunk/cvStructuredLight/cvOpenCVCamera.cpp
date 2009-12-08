@@ -3,10 +3,9 @@
 #include "cvOpenCVCamera.h"
 #include "cvUtilProCam.h"
 
-CVOpenCVCamera::CVOpenCVCamera(struct slParams* sl_params_)
+CVOpenCVCamera::CVOpenCVCamera()
 {
-    sl_params = sl_params_;
-    
+    sl_params = NULL;
     capture = NULL;
 }
 
@@ -16,8 +15,10 @@ CVOpenCVCamera::~CVOpenCVCamera()
         cvReleaseCapture(&capture);
 }
 
-int CVOpenCVCamera::Init()
+int CVOpenCVCamera::Init(struct slParams* sl_params_)
 {
+    sl_params = sl_params_;
+
     // Initialize capture from any detected device.
     printf("Initializing camera and projector...\n"); 
     if(sl_params->Logitech_9000){

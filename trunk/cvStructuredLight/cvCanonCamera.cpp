@@ -98,7 +98,7 @@ CVCanonCamera::~CVCanonCamera()
     }
 }
 
-int CVCanonCamera::Init()
+int CVCanonCamera::Init(struct slParams* sl_params_)
 {
     CoInitializeEx(NULL, COINIT_MULTITHREADED);
 

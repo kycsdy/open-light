@@ -19,10 +19,10 @@ private:
     struct slParams* sl_params;
 
 public:
-    CVOpenCVCamera(struct slParams* sl_params_);
+    CVOpenCVCamera();
     ~CVOpenCVCamera();
 
-    int Init();
+    int Init(struct slParams* sl_params_);
     int StartCapture();
     int EndCapture();
 

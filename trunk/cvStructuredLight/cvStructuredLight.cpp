@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 {
     // Create the camera
     CVCamera* camera;
-    #if USE_CAMERA_ID 0
+    #if USE_CAMERA_ID == 0
         // OpenCV
         camera = new CVOpenCVCamera();
     #else
@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
 
     // Init Camera
     int retVal;
-    retVal = camera->Init();
+    retVal = camera->Init(&sl_params);
     if(retVal != 0)
     {
         printf("ERROR: camera->Init()\n");

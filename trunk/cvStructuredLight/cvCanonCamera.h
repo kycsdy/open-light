@@ -41,7 +41,7 @@ public:
     CVCanonCamera();
     ~CVCanonCamera();
 
-    int Init();
+    int Init(struct slParams* sl_params_);
     int StartCapture();
     int EndCapture();
 

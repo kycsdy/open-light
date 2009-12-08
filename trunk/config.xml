@@ -2,7 +2,7 @@
 <opencv_storage>
 <output>
   <output_directory>"./output"</output_directory>
-  <object_name>"test"</object_name>
+  <object_name>"hastac2"</object_name>
   <save_intermediate_results>1</save_intermediate_results></output>
 <camera>
   <width>928</width>
@@ -34,10 +34,10 @@
   <mode>2</mode>
   <reconstruct_columns>1</reconstruct_columns>
   <reconstruct_rows>1</reconstruct_rows>
-  <frame_delay_ms>200</frame_delay_ms>
-  <minimum_contrast_threshold>75</minimum_contrast_threshold>
-  <minimum_distance_mm>100.</minimum_distance_mm>
-  <maximum_distance_mm>1500.</maximum_distance_mm>
+  <frame_delay_ms>400</frame_delay_ms>
+  <minimum_contrast_threshold>50</minimum_contrast_threshold>
+  <minimum_distance_mm>500.</minimum_distance_mm>
+  <maximum_distance_mm>2500.</maximum_distance_mm>
   <maximum_distance_variation_mm>100.</maximum_distance_variation_mm>
   <minimum_background_distance_mm>20.</minimum_background_distance_mm></scanning_and_reconstruction>
 <visualization>

@@ -440,7 +440,6 @@ int CVScanProCam::reconstructStructuredLight(struct slParams* sl_params,
 						gray_mask_data[r*gray_mask_step+c] = 0;
 				}
 				else{
-
 					// Reconstruct surface using "ray-ray" triangulation.
 					int corresponding_column = gray_decoded_cols_data[r*gray_decoded_cols_step+c];
 					int corresponding_row    = gray_decoded_rows_data[r*gray_decoded_rows_step+c];
@@ -710,6 +709,11 @@ int CVScanProCam::runStructuredLight(struct slParams* sl_params,
 		printf("Scanning was not successful and must be repeated!\n");
 		return -1;
 	}
+
+	// Save the point cloud.
+	printf("Saving the point cloud (cvMat)...\n");
+	sprintf(str, "%s\\%s\\points.xml", sl_params->outdir, sl_params->object);
+    cvSave(str, points);
 
 	// Free allocated resources.
 	cvReleaseImage(&gray_decoded_cols);

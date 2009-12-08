@@ -30,7 +30,7 @@ enum CameraID
 // Which camera to use
 // 0 - Opencv 
 // 1 - Canon EDSDK
-#define USE_CAMERA_ID 0
+#define USE_CAMERA_ID 1
 
 // Define structure for storing structured lighting parameters.
 struct slParams{

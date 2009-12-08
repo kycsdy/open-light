@@ -13,7 +13,7 @@ public:
     CVCamera();
     ~CVCamera();
 
-    virtual int Init() = 0;
+    virtual int Init(struct slParams* sl_params_) = 0;
     virtual int StartCapture() = 0;
     virtual int EndCapture() = 0;
 
